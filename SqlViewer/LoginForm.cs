@@ -9,6 +9,15 @@ namespace Zadatak
         public LoginForm()
         {
             InitializeComponent();
+            FillDevelopmentLoginData();
+        }
+
+        private void FillDevelopmentLoginData()
+        {
+            //spajam se na Lukinu bazu :)
+            TbServer.Text = "sql.lcabraja.dev";
+            TbUserName.Text = "SA";
+            TbPassword.Text = "Pa$$word";
         }
 
         private void BtnLogIn_Click(object sender, EventArgs e)
