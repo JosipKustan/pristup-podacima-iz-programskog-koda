@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using Zadatak.Dal;
 using Zadatak.Models;
+using Zadatak0102;
 
 namespace Zadatak
 {
@@ -65,6 +66,11 @@ namespace Zadatak
             new SelectResultsForm(ds.Tables[0]).ShowDialog();
         }
 
+        private void btnDML_Click(object sender, EventArgs e)
+        {
+            new DMLqueryForm().Show();
+        }
+
 
         private void BtnXml_Click(object sender, EventArgs e)
         {
@@ -95,5 +101,11 @@ namespace Zadatak
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e) => Application.Exit();
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

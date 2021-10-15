@@ -13,5 +13,7 @@ namespace Zadatak.Dal
         IEnumerable<Parameter> GetParameters(Procedure procedure);
         IEnumerable<Procedure> GetProcedures(Database database);
         void LogIn(string server, string username, string password);
+        DataTable GetQuery(string queryString);
+
     }
 }

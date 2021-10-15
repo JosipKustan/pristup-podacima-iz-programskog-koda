@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using Zadatak.Models;
+using Zadatak0102;
 
 namespace Zadatak.Dal
 {
@@ -151,6 +153,29 @@ namespace Zadatak.Dal
                             };
                         }
                     }
+                }
+            }
+        }
+
+        public DataTable GetQuery(string queryString)
+        {
+
+            var ds = new DataSet();
+            
+            using (SqlConnection connection = new SqlConnection(
+               cs))
+            {
+                connection.Open();
+                var command = new SqlCommand(queryString, connection);
+                var adapter = new SqlDataAdapter(command);
+                try
+                {
+                    adapter.Fill(ds);
+                    return ds.Tables[0];
+                }
+                catch (Exception)
+                {
+                    return new DataTable();
                 }
             }
         }
