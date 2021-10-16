@@ -1,0 +1,13 @@
+private const string FirstNameParam = "@firstname";
+private const string LastNameParam = "@lastname";
+private const string AgeParam = "@age";
+private const string EmailParam = "@email";
+private const string PictureParam = "@picture";
+private const string IdPersonParam = "@idPerson";
+
+private const string Filter = "All supported graphics|*.jpg;*.jpeg;*.png|JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|Portable Network Graphic (*.png)|*.png";
+
+@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z"
+
+
+https://foxlearn.com/windows-forms/how-to-encrypt-and-decrypt-connection-string-in-app-config-file-in-csharp-411.html
